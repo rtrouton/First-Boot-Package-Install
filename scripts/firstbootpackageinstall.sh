@@ -3,7 +3,7 @@
 install_dir=/Users/Shared/fb_installers
 log_location="/var/log/firstbootpackageinstall.log"
 archive_log_location="/var/log/firstbootpackageinstall-`date +%Y-%m-%d-%H-%M-%S`.log"
-LoginLogLaunchAgent="/Library/LaunchAgents/se.gu.it.LoginLog.plist"
+LoginLogLaunchAgent="/Library/LaunchAgents/com.company.LoginLog.plist"
 LoginLogApp="/Library/PrivilegedHelperTools/LoginLog.app"
 
 # Function to provide logging of the script's actions to

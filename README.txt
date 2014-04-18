@@ -9,7 +9,7 @@ Usage
 
 3. Go to Contents: Resources: fb_installers
 
-4. Add one installer package to each numbered directory. The number of the directory indicates the install order, with 00 being the first. As needed, more numbered directories may be added. For numbers less than 9, make sure to label the directory with a leading zero (For example, 06).
+4. Add one installer package to each numbered directory. The number of the directory indicates the install order, with 00 being the first. As needed, more numbered directories may be added. For numbers 9 or less, make sure to label the directory with a leading zero (For example, 06).
 
 NOTE: createOSXinstallPkg has an upper limit of 350 MBs of available space for added packages. This is sufficient space for basic configuration, payload-free or bootstrapping packages, but it's not a good idea to add Microsoft Office or similar large installers to this installer.
 
@@ -71,7 +71,7 @@ Network check fails - If only loopback addresses are detected within 60 minutes,
 • Restart.
 • On restart, the "if /Users/Shared/fb_installers is not found" actions occur.
 
-Network check succeeds - If a non-loopback message is detected, the script will take the following actions:
+Network check succeeds - If a non-loopback address is detected, the script will take the following actions:
 
 • Log a success message to the log and proceed with the rest of the script.
 

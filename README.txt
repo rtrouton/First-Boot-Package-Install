@@ -127,11 +127,4 @@ https://github.com/MagerValp/LoginLog
 Blog Posts
 -----------
 
-Original post:
-
-http://derflounder.wordpress.com/2013/05/13/first-boot-package-install-pkg/
-
-
-Post with latest info:
-
-http://derflounder.wordpress.com/2014/04/17/first-boot-package-install-revisited/
+http://derflounder.wordpress.com/category/first-boot-package-install/

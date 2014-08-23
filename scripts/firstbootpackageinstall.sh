@@ -152,11 +152,25 @@ if [[ -d "$install_dir" ]]; then
   do
      /bin/echo "`date +%Y-%m-%d\ %H:%M:%S`  Installing "${install[$i]}" on this Mac." >> $log_location
      /usr/sbin/installer -dumplog -verbose -pkg "${install[$i]}" -target /
-     /bin/echo "`date +%Y-%m-%d\ %H:%M:%S`  Finished installing "${install[$i]}" on this Mac." >> $log_location
+
+	# Check for installation success. If an installation did not return
+	# an exit status of 0, add a note to the log that the installation
+	# had problems and should be checked.
+     
+	if [ $? != "0" ]
+	then
+        INSTALLRESULT="FAILURE: "${install[$i]}" did not install correctly."
+    else
+        INSTALLRESULT="SUCCESS: "${install[$i]}" has been successfully installed."
+	fi
+     
+     /bin/echo "`date +%Y-%m-%d\ %H:%M:%S`  $INSTALLRESULT" >> $log_location
   done
 
   # Remove the installers
    ScriptLogging "Finished with all installations."
+   ScriptLogging "If any installations were reported as not installing correctly,"
+   ScriptLogging "please check /var/log/install.log on this Mac for details."
    ScriptLogging "Removing $install_dir from this Mac."
    /bin/rm -rf $install_dir
    

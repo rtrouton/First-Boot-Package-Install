@@ -81,6 +81,11 @@ if [[ -d "$install_dir" ]]; then
 # The network connection check will occur every 5 seconds
 # until the 60 minute limit is reached.
 
+# Detect unregistered network services prior
+# to beginning the network connection check
+
+  /usr/sbin/networksetup -detectnewhardware
+
   ScriptLogging "Checking for active network connection."
   ScriptLogging "========================================="
   ScriptLogging "This check will automatically run every five"

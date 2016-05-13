@@ -107,7 +107,7 @@ LaunchDaemon - Available in launchd_items/LaunchDaemons as com.company.firstboot
 
 LaunchAgent - Available in launchd_items/LaunchAgents as com.company.LoginLog.plist
 
-LoginLog application - Available in loginlog_application as LoginLog.zip
+LoginLog application - Available in loginlog_application as LoginLog-1.1.dmg
 
 Scripts - Both the installer postflight and firstbootpackageinstall.sh are available in the following directories:
 
